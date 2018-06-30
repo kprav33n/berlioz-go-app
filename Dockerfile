@@ -8,5 +8,5 @@ RUN go build .
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
-COPY --from=builder /go/src/github.com/kprav33n/berlioz-go-app/berlioz-go-app .
+COPY --from=builder /go/src/github.com/kprav33n/berlioz-go-app/berlioz-go-app app
 CMD ["./app"]
